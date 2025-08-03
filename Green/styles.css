@@ -1,1 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: url('img/apurv-das-ciN8mnrlvFY-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.form_container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 50px 40px 20px 40px;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.151);
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+        0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+        0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    font-family: "Inter", sans-serif;
+    animation: fadeInUp 0.6s ease-out;
+
+    &>.title_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        &>.title {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #f0f0f0;
+        }
+
+        &>.subtitle {
+            font-size: 0.725rem;
+            max-width: 80%;
+            text-align: center;
+            line-height: 1.1rem;
+            color: #8B8E98;
+        }
+    }
+
+    &>.input_container {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &>svg.icon {
+            width: 20px;
+            position: absolute;
+            z-index: 99;
+            left: 12px;
+            bottom: 9px;
+        }
+
+        &>label.input_label {
+            font-size: 0.75rem;
+            color: #8B8E98;
+            font-weight: 600;
+        }
+
+        &>input.input_field {
+            width: auto;
+            height: 40px;
+            padding: 0 0 0 40px;
+            border-radius: 7px;
+            outline: none;
+            border: 1px solid #e5e5e5;
+            filter: drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+            transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+
+            &:focus {
+                border: 1px solid transparent;
+                box-shadow: 0px 0px 0px 2px #242424;
+            }
+        }
+    }
+
+    &>.sign-in_btn {
+        width: 100%;
+        height: 40px;
+        border: 0;
+        background: #115DFC;
+        border-radius: 7px;
+        outline: none;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &>.sign-in_ggl {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #fff;
+        border-radius: 7px;
+        outline: none;
+        color: #242424;
+        border: 1px solid #e5e5e5;
+        filter: drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &>.sign-in_apl {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #fff;
+        border-radius: 7px;
+        outline: none;
+        color: #242424;
+        border: 1px solid #e5e5e5;
+        filter: drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &>.sign-in_btn:hover,
+    .sign-in_ggl:hover,
+    .sign-in_apl:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-1px);
+        transition: all 0.2s ease-in-out;
+    }
+
+
+    &>.separator {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        color: #8B8E98;
+    }
+
+    &>.separator .line {
+        display: block;
+        width: 100%;
+        height: 1px;
+        border: 0;
+        background-color: #e8e8e8;
+    }
+
+    &>.note {
+        font-size: 0.75rem;
+        color: #8B8E98;
+        text-decoration: underline;
+    }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
